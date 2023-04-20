@@ -69,6 +69,8 @@ const author = () => {
     });
   }, []);
 
+  console.log(nfts, 'anjing');
+
   useEffect(() => {
     fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
       setMyNFTs(items);

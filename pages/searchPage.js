@@ -21,17 +21,19 @@ const searchPage = () => {
 
   useEffect(() => {
     try {
-      if (currentAccount) {
+      // if (currentAccount) {
       fetchNFTs().then((items) => {
         setNfts(items.reverse());
         setNftsCopy(items);
         console.log(nfts);
       });
-      }
+      // }
     } catch (error) {
       setError("Please reload the browser", error);
     }
   }, []);
+
+  console.log(nfts, 'nfts');
 
   const onHandleSearch = (value) => {
     const filteredNFTS = nfts.filter(({ name }) =>
